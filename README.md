@@ -5,20 +5,27 @@ Xposed module built on the modern LSPosed API that hides ads and sponsored conte
 ![Update Selectors](https://github.com/hxreborn/amznkiller/actions/workflows/update-selectors.yml/badge.svg)
 ![Validate Selectors](https://github.com/hxreborn/amznkiller/actions/workflows/validate-selectors.yml/badge.svg)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.3.10-7F52FF?style=flat&logo=kotlin&logoColor=white)
-![Android](https://img.shields.io/badge/API-28%2B-3DDC84?logo=android&logoColor=white)
+![Android](https://img.shields.io/badge/API-29%2B-3DDC84?logo=android&logoColor=white)
 
 ## Features
 
 - Remove sponsored cards, video carousels, and other promotional UI in the Amazon app
 - Maintained built-in selector list with remote updates. Optionally use your own self-hosted selector list via custom URL.
 - Selector sanitization blocks common CSS injection patterns
-- Material 3 Expressive settings UI with Jetpack Compose
+- Price history charts on product pages via Keepa and CamelCamelCamel (US, UK, DE, FR, JP, CA, IT, ES, IN, MX, BR, AU)
+- [Force Dark](#how-does-force-dark-work) (experimental) uses the native force dark algorithm with supplementary CSS fixes to darken Amazon pages
 - Recommended alongside Private DNS and hosts-based blocking
+- Material 3 Expressive settings UI with Jetpack Compose
 - Free and open source (FOSS)
+
+## Known Issues
+
+- [Force Dark](#how-does-force-dark-work) is experimental and disabled by default. Some Amazon screens may still have contrast issues. If this happens, disable Force Dark and report the page URL with a screenshot
+- Price history charts are still being expanded and may not appear on some product pages yet.
 
 ## Requirements
 
-- Android 9 (API 28) or higher
+- Android 10 (API 29) or higher
 - [LSPosed](https://github.com/JingMatrix/LSPosed) (JingMatrix fork recommended)
 - Amazon Shopping app (`com.amazon.mShop.android.shopping`)
 
@@ -66,6 +73,7 @@ Search query: *"macbook air m1 16gb 512"*
 
 See [Troubleshooting](#troubleshooting). Most common causes: module not scoped correctly,
 missing force stop on Amazon Shopping, or LSPosed not activated.
+
 </details>
 
 <details>
@@ -74,14 +82,16 @@ missing force stop on Amazon Shopping, or LSPosed not activated.
 1. Disable CSS injection in AmznKiller settings to confirm selectors are the cause.
 2. Update selectors from the dashboard (tap refresh).
 3. If it persists, open an issue with: AmznKiller version, Amazon app version, WebView version,
-   selector count.
-</details>
+selector count.
+
+ </details>
 
 <details>
 <summary>Sync says "remote failed" or "bundled only"</summary>
 
 Bundled selectors are still applied. Check connectivity, reset the selector URL in settings,
 and refresh again.
+
 </details>
 
 <details>
@@ -89,12 +99,14 @@ and refresh again.
 
 Cosmetic only. It injects CSS to hide ad elements. Network requests still happen.
 Works alongside DNS-based blockers (AdGuard, NextDNS, Private DNS, hosts files).
+
 </details>
 
 <details>
 <summary>Does this work on Amazon Lite or other Amazon apps?</summary>
 
 No. The module is scoped to `com.amazon.mShop.android.shopping` only for now.
+
 </details>
 
 <details>
@@ -102,6 +114,22 @@ No. The module is scoped to `com.amazon.mShop.android.shopping` only for now.
 
 No. Updated selectors apply on the next page load inside Amazon Shopping. Force stop
 Amazon Shopping if changes don't appear immediately.
+
+</details>
+
+<details>
+<summary>How does Force Dark work?</summary>
+
+Amazon disables Android's force dark algorithm via its theme. The module hooks
+`ViewRootImpl.determineForceDarkType` and overrides the return to `FORCE_DARK_ALWAYS`, which
+triggers GPU-level algorithmic darkening on all content including WebViews. Additional hooks set
+dark window backgrounds, theme native nav elements, and prevent white flash on WebView load.
+`DarkModeInjector` ships CSS fixes for elements the algorithm gets wrong (product images,
+buy buttons, deal badges).
+
+If you spot a rendering issue, open an issue with a screenshot and page URL. You can enable
+WebView debugging in settings and inspect via `chrome://inspect`.
+
 </details>
 
 ## Troubleshooting
