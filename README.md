@@ -6,7 +6,6 @@ Hide ads and sponsored content in the Amazon Shopping Android app.
 ![libxposed API 101](https://img.shields.io/badge/libxposed-API_101-ff69b4?style=flat)
 [![Release](https://img.shields.io/github/v/release/hxreborn/amznkiller?style=flat&logo=github)](https://github.com/hxreborn/amznkiller/releases/latest)
 [![Build](https://img.shields.io/github/actions/workflow/status/hxreborn/amznkiller/android-ci.yml?label=build&style=flat&logo=githubactions&logoColor=white)](https://github.com/hxreborn/amznkiller/actions/workflows/android-ci.yml)
-[![License](https://img.shields.io/github/license/hxreborn/amznkiller?style=flat&logo=gnu)](LICENSE)
 
 ## Features
 
