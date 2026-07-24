@@ -60,9 +60,11 @@ Search query: _"macbook air m1 16gb 512"_
 
 ## Force Dark
 
-Amazon disables Android force dark via `forceDarkAllowed=false` in its theme. The module hooks `ViewRootImpl.determineForceDarkType` and forces the return to `FORCE_DARK_ALWAYS`, triggering GPU-level darkening across native views and WebViews. Extra hooks paint window backgrounds dark and block white-flash on WebView load. `DarkModeInjector` ships CSS overrides for elements the algorithm gets wrong.
+Amazon opts out of force dark with `forceDarkAllowed=false`. The module hooks `ViewRootImpl.determineForceDarkType` and returns `FORCE_INVERT_COLOR_DARK` (2), darkening native views and WebViews at GPU level. Extra hooks paint window backgrounds dark and block the white flash on WebView load, and `DarkModeInjector` adds CSS for what the algorithm misses.
 
-`determineForceDarkType` was introduced in Android 15 (API 35). On Android 10-14 the primary hook does not apply. A fallback on `HardwareRenderer.setForceDark` is attempted but Amazon's theme opt-out blocks darkening on those versions.
+`FORCE_DARK` (1) is not enough. Amazon's views are already light-themed, so the classic algorithm skips them.
+
+`determineForceDarkType` landed in Android 15 (API 35), so Android 10-14 falls back to `HardwareRenderer.setForceDark`, which Amazon's opt-out blocks. Android 15+ is still no guarantee: some Android 16 devices keep light native views, suspected to be ROMs missing `FORCE_INVERT_COLOR_DARK` but unconfirmed. See [#6](https://github.com/hxreborn/amznkiller/issues/6) and include `dark probe forcedarktype` from debug logs when reporting.
 
 Disabled by default. Enable in settings if on Android 15+.
 
