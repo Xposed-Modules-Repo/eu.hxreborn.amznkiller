@@ -26,9 +26,11 @@ An Xposed module that hides ads and sponsored products in the Amazon Shopping ap
 
 Search query: _"macbook air m1 16gb 512"_
 
-| Stock (2 real results, rest are ads) | Patched |
+| Stock (2 real results, rest are ads) | With AmznKiller |
 | --- | --- |
-| <img src="https://github.com/user-attachments/assets/4c2fb092-0e63-4a34-b9ba-afe1a4028b09" width="280" alt="Stock Amazon app" /> | <img src="https://github.com/user-attachments/assets/135e1fec-b0e9-4dc1-9d58-49fabd825262" width="280" alt="Patched Amazon app" /> |
+| <img src="https://github.com/user-attachments/assets/4c2fb092-0e63-4a34-b9ba-afe1a4028b09" width="280" alt="Stock Amazon app" /> | <img src="https://github.com/user-attachments/assets/135e1fec-b0e9-4dc1-9d58-49fabd825262" width="280" alt="Amazon app with AmznKiller" /> |
+
+<br>
 
 <table>
   <tr>
@@ -48,18 +50,17 @@ Search query: _"macbook air m1 16gb 512"_
   </tr>
 </table>
 
+<br>
+
 <details>
 <summary><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/icons/photo_library.svg" width="20" alt=""> Companion app</summary>
 
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/dashboard.webp" width="240" alt="Dashboard"><br><sub>Dashboard</sub></td>
-    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/settings.webp" width="240" alt="Settings"><br><sub>Settings</sub></td>
-    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/about.webp" width="240" alt="About"><br><sub>About</sub></td>
-  </tr>
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/changelog.webp" width="240" alt="Changelog"><br><sub>Changelog</sub></td>
-    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/update.webp" width="240" alt="Update"><br><sub>Update</sub></td>
+    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/dashboard.webp" width="200" alt="Dashboard"><br><sub>Dashboard</sub></td>
+    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/settings.webp" width="200" alt="Settings"><br><sub>Settings</sub></td>
+    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/about.webp" width="200" alt="About"><br><sub>About</sub></td>
+    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/update.webp" width="200" alt="Update"><br><sub>Update</sub></td>
   </tr>
 </table>
 
