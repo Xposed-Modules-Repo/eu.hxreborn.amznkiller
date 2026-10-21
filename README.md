@@ -5,9 +5,11 @@
   </picture>
 </h1>
 
-[![libxposed API 102](https://img.shields.io/badge/libxposed_API-102-ff69b4?style=flat-square)](https://central.sonatype.com/artifact/io.github.libxposed/api)
-[![Release](https://img.shields.io/github/v/release/hxreborn/amznkiller?style=flat-square)](https://github.com/hxreborn/amznkiller/releases/latest)
-[![Android 10+](https://img.shields.io/badge/Android-10%2B-3DDC84?style=flat-square&logo=android&logoColor=white)](#install)
+<p align="center">
+  <a href="https://central.sonatype.com/artifact/io.github.libxposed/api"><img src="https://img.shields.io/badge/libxposed_API-102-ff69b4?style=flat-square" alt="libxposed API 102"></a>
+  <a href="https://github.com/hxreborn/amznkiller/releases/latest"><img src="https://img.shields.io/github/v/release/hxreborn/amznkiller?style=flat-square" alt="Release"></a>
+  <a href="#install"><img src="https://img.shields.io/badge/Android-10%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 10+"></a>
+</p>
 
 An Xposed module that hides ads and sponsored products in the Amazon Shopping app. It injects CSS rules into Amazon's pages that hide the ad markup and leave the rest of the page alone.
 
@@ -24,11 +26,20 @@ An Xposed module that hides ads and sponsored products in the Amazon Shopping ap
 
 ## Before and after
 
-Search query: _"macbook air m1 16gb 512"_
+<div align="center">
 
-| Stock (2 real results, rest are ads) | With AmznKiller |
-| --- | --- |
-| <img src="https://github.com/user-attachments/assets/4c2fb092-0e63-4a34-b9ba-afe1a4028b09" width="280" alt="Stock Amazon app" /> | <img src="https://github.com/user-attachments/assets/135e1fec-b0e9-4dc1-9d58-49fabd825262" width="280" alt="Amazon app with AmznKiller" /> |
+<p>Search query: <em>"macbook air m1 16gb 512"</em></p>
+
+<table>
+  <tr>
+    <th>Stock (2 real results, rest are ads)</th>
+    <th>With AmznKiller</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/4c2fb092-0e63-4a34-b9ba-afe1a4028b09" width="280" alt="Stock Amazon app" /></td>
+    <td><img src="https://github.com/user-attachments/assets/135e1fec-b0e9-4dc1-9d58-49fabd825262" width="280" alt="Amazon app with AmznKiller" /></td>
+  </tr>
+</table>
 
 <br>
 
@@ -50,10 +61,14 @@ Search query: _"macbook air m1 16gb 512"_
   </tr>
 </table>
 
+</div>
+
 <br>
 
 <details>
 <summary><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/icons/photo_library.svg" width="20" alt=""> Companion app</summary>
+
+<div align="center">
 
 <table>
   <tr>
@@ -63,6 +78,8 @@ Search query: _"macbook air m1 16gb 512"_
     <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/update.webp" width="200" alt="Update"><br><sub>Update</sub></td>
   </tr>
 </table>
+
+</div>
 
 </details>
 
