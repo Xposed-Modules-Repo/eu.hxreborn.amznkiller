@@ -51,8 +51,8 @@ An Xposed module that hides ads and sponsored products in the Amazon Shopping ap
   </tr>
   <tr>
     <td>Price charts</td>
-    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/charts-stock.webp" width="280" alt="Product page without price charts"></td>
-    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/charts.webp" width="280" alt="Product page with Keepa and CamelCamelCamel charts"></td>
+    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/charts-stock.webp" width="280" alt="Echo Dot page without price charts"></td>
+    <td><img src="https://raw.githubusercontent.com/hxreborn/amznkiller/main/assets/screenshots/charts.webp" width="280" alt="Echo Dot page with Keepa and CamelCamelCamel charts"></td>
   </tr>
   <tr>
     <td>Dark mode</td>
